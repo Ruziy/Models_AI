@@ -1,0 +1,2 @@
+work_with_book/open_code_TZ/create_datasets/model_on_dataset_Yolov3.keras filter=lfs diff=lfs merge=lfs -text
+work_with_book/open_code_TZ/pipeline_live_detection/yolov3.weights filter=lfs diff=lfs merge=lfs -text

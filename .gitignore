@@ -3,3 +3,5 @@ work_with_book/animals_imgs/inception_v3.ckpt
 work_with_book/open_code_TZ/create_datasets/archive
 work_with_book/open_code_TZ/create_datasets/images
 work_with_book/open_code_TZ/create_datasets/annotations
+work_with_book/open_code_TZ/pipeline_live_detection/yolov3.weights
+work_with_book/open_code_TZ/create_datasets/model_on_dataset_Yolov3.keras

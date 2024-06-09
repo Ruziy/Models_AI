@@ -2,12 +2,19 @@ import cv2
 import numpy as np
 
 # Загрузка YOLO
-net = cv2.dnn.readNet("yolov3.weights", "yolov3.cfg")
+net = cv2.dnn.readNet("work_with_book\\open_code_TZ\\pipeline_live_detection\\yolov3.weights", 
+                      "work_with_book\\open_code_TZ\\pipeline_live_detection\\yolov3.cfg")
+
+# Установите предпочитаемый бекенд и таргет для использования GPU
+net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
+net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
+
 layer_names = net.getLayerNames()
-output_layers = [layer_names[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+output_layers = [layer_names[i - 1] for i in net.getUnconnectedOutLayers()]
+
 
 # Загрузка меток классов
-with open("coco.names", "r") as f:
+with open("work_with_book\\open_code_TZ\\pipeline_live_detection\\coco.names", "r") as f:
     classes = [line.strip() for line in f.readlines()]
 
 # Функция для обработки кадров
@@ -47,7 +54,7 @@ def process_frame(frame):
 
     return frame
 
-# Захват видеопотока с камеры
+#Захват видеопотока с камеры
 cap = cv2.VideoCapture(0)
 while True:
     _, frame = cap.read()

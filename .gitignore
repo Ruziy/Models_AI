@@ -5,3 +5,6 @@ work_with_book/open_code_TZ/create_datasets/images
 work_with_book/open_code_TZ/create_datasets/annotations
 work_with_book/open_code_TZ/pipeline_live_detection/yolov3.weights
 work_with_book/open_code_TZ/create_datasets/model_on_dataset_Yolov3.keras
+work_with_book/BBN_LLC/yolov5x.pt
+work_with_book/BBN_LLC/yolov5s.pt
+work_with_book/BBN_LLC/video

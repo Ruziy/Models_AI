@@ -68,8 +68,8 @@ def main():
     """
     Основная точка входа в программу.
     """
-    input_path = 'work_with_book\BBN_LLC/video\crowd.mp4'
-    output_path = 'work_with_book\BBN_LLC/video\output_crowd.mp4'
+    input_path = 'crowd.mp4'
+    output_path = 'woutput_crowd.mp4'
     
     model = load_model()
     total_people_count = process_video(input_path, output_path, model, conf_threshold=0.2)

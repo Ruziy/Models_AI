@@ -4,6 +4,8 @@ import keras_tuner as kt
 import os
 import numpy as np
 from sklearn.model_selection import train_test_split
+import os
+os.environ["PYTHONIOENCODING"] = "utf-8"
 
 # Функция для загрузки и предобработки датасета
 def load_dataset(data_folder, target_class="person", max_annotations=10):

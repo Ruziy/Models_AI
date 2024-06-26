@@ -11,10 +11,14 @@ def copy_images(source_folder, target_folder):
         for file in files:
             source_path = os.path.join(root, file)
             _, ext = os.path.splitext(file)
-            # Генерируем случайное имя файла
+            # Генерируем случайное имя файла с явным указанием кодировки
             random_name = ''.join(random.choices(string.ascii_lowercase + string.digits, k=8))
             target_path = os.path.join(target_folder, f"{random_name}{ext}")
-            shutil.copy(source_path, target_path)
+            try:
+                shutil.copy2(source_path, target_path)
+            except UnicodeDecodeError:
+                # Обработка ошибки кодировки при копировании
+                print(f"Ошибка при копировании файла: {source_path}")
 
 # Создаем папку для изображений, если она еще не существует
 os.makedirs(target_folder, exist_ok=True)

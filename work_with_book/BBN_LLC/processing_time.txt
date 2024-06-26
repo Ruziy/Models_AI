@@ -1,0 +1,1 @@
+Time with segmentation: 1408.01 seconds
